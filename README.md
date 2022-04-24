@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WillPHPv4
 
 WillPHPv4是一个轻量级组件化php开发框架
@@ -35,3 +36,7 @@ WillPHPv4是一个轻量级组件化php开发框架
 
   
 
+=======
+# willphp
+a minni PHP framework
+>>>>>>> b27cb9fe3dd1d8e849f330f696aeab1eb196f779
