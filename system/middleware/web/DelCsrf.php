@@ -7,19 +7,17 @@
  | WeChat: www113344
  | Copyright (c) 2020-2022, www.113344.com. All Rights Reserved.
  |-------------------------------------------------------------------------*/
-namespace system\middleware;
+namespace system\middleware\web;
 use willphp\config\Config;
 use willphp\session\Session;
 /**
- * 框架启动
+ * 添加Trace输出
  */
-class Boot {	
-	public function run($next){
-		header('X-Powered-By:WillPHP');	
-		trace('执行全局中件间');
-		if (Config::get('view.csrf_check') && ($csrf_token = Session::get('csrf_token', ''))) {
-			header('HTTP_X_CSRF_TOKEN:'.$csrf_token); //添加csrf头 
-		}	
-        $next();
+class DelCsrf {
+	public function run($next, $output = ''){
+		if (Config::get('view.csrf_check') && IS_POST) {		
+			Session::set('csrf_token', null);		
+		}
+		$next();
 	}
 }

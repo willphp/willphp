@@ -1,4 +1,15 @@
 <?php
+if (!function_exists('dd')) {
+	/**
+	 * 变量输出并结束
+	 * @param mixed $vars 要输出的变量
+	 * @return void
+	 */
+	function dd(...$vars) {
+		dump(...$vars);
+		exit();
+	}
+}
 if (!function_exists('site')) {
 	/**
 	 * 获取和设置网站配置参数
@@ -46,15 +57,5 @@ if (!function_exists('widget')) {
 		}
 		$class = '\app\\'.$app.'\\widget\\'.ucfirst($name);
 		return app($class, true);
-	}
-}
-if (!function_exists('view_update')) {
-	/**
-	 * 更新模板缓存
-	 * @param string|array $route 模板路由
-	 * @return bool
-	 */
-	function view_update($route = '') {
-		return \willphp\view\View::delCache($route);
 	}
 }

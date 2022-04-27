@@ -1,0 +1,11 @@
+{include 'public/header.html'}
+<h4>模型：列表分页<span class="y"><a href="{:url('index')}">列表</a> | <a href="{:url('add')}">添加</a></span></h4>
+<ul class="cl">
+	{foreach $list as $vo}
+	<li>[{$cates[$vo['cid']]}] <a href="{:url('model/view',['id'=>$vo['id']])}">{$vo.title} ({$vo.hits}) </a> <span class="y"><a href="{:url('model/edit',['id'=>$vo['id']])}">修改</a> | <a href="{:url('model/del',['id'=>$vo['id']])}">删除</a> | {$vo.ctime}</span></li>
+	{empty $list->toArray()}
+	<li>列表为空</li>					
+	{/foreach}			
+</ul>
+{$list->links()}
+{include 'public/footer.html'}

@@ -19,7 +19,7 @@ class Csrf {
 	protected $token; //表单令牌	
 	public function run($next){
 		$this->setServerToken(); //&& IS_POST
-		$status = Config::get('view.csrf_check') && ($_SERVER['HTTP_HOST'] == Request::getHost(__HISTORY__));	
+		$status = Config::get('view.csrf_check') && IS_POST && ($_SERVER['HTTP_HOST'] == Request::getHost(__HISTORY__));	
 		if ($status && $this->getClientToken() != $this->token) {			
 			Error::_403();						
 		}

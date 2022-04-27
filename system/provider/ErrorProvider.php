@@ -7,19 +7,18 @@
  | WeChat: www113344
  | Copyright (c) 2020-2022, www.113344.com. All Rights Reserved.
  |-------------------------------------------------------------------------*/
-namespace system\middleware;
-use willphp\config\Config;
-use willphp\session\Session;
-/**
- * 框架启动
- */
-class Boot {	
-	public function run($next){
-		header('X-Powered-By:WillPHP');	
-		trace('执行全局中件间');
-		if (Config::get('view.csrf_check') && ($csrf_token = Session::get('csrf_token', ''))) {
-			header('HTTP_X_CSRF_TOKEN:'.$csrf_token); //添加csrf头 
-		}	
-        $next();
+namespace system\provider;
+use willphp\framework\build\Provider;
+class ErrorProvider extends Provider {
+	public $defer = false; //延迟加载	
+	public function boot() {		
+		$whoops = new \Whoops\Run;
+		$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+		$whoops->register();
+	}
+	public function register() {
+		$this->app->single('Error', function () {
+			return new \Whoops\Run;
+		});
 	}
 }

@@ -2,7 +2,7 @@
 namespace app\home\controller;
 class EmptyController {	
 	use \willphp\view\Jump;	
-	public function _empty() {		
+	public function empty() {		
 		$this->_404();
 	}
 }

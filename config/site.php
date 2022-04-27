@@ -1,4 +1,4 @@
 <?php
 return [
-		'theme' => 'default',
+		'theme' => 'default', //主题
 ];

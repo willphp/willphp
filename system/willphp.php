@@ -23,6 +23,5 @@ define('__ROOT__', rtrim(strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/'), '/'
 define('__STATIC__', __ROOT__.'/static'); //静态资源目录
 define('__UPLOAD__', __ROOT__.'/uploads'); //资源上传目录
 require WIPHP_URI.'/system/autoload.php'; //引入自动加载
-//require WIPHP_URI.'/system/helper.php'; //引入助手函数
 if (file_exists(WIPHP_URI.'/app/common.php')) require WIPHP_URI.'/app/common.php'; //载入用户函数库
 \willphp\framework\App::bootstrap(); //启动框架

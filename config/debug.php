@@ -3,7 +3,7 @@ return [
 		//设置显示trace的级别
 		'trace_level' => [
 				'base'  => '基本',				
-				//'file'  => '文件', //不显示文件加载栏目
+				//'file'  => '文件', //文件加载栏目
 				'sql'   => 'SQL',
 				'debug' => '调试',
 				'post'  => 'POST',

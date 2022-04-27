@@ -7,12 +7,17 @@
  | WeChat: www113344
  | Copyright (c) 2020-2022, www.113344.com. All Rights Reserved.
  |-------------------------------------------------------------------------*/
-namespace system\middleware;
+namespace system\middleware\web;
+use willphp\config\Config;
+use willphp\log\Log;
 /**
- * 权限验证
+ * 记录sql到log
  */
-class Auth {	
-	public function run($next){	
+class LogSql {	
+	public function run($next, $sql = ''){
+		if (Config::get('app.debug') && Config::get('app.trace')) {				
+			Log::record($sql, 'sql');
+		}
         $next();
 	}
 }
