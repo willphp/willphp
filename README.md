@@ -1,10 +1,10 @@
 ##WillPHP框架
 
->WillPHPv3是一个轻量级php开发框架
+>WillPHPv4是一个轻量级php开发框架
 
 ###环境要求
 
-- PHP版本需要 >=5.6
+- PHP版本需要 >=7.4.3 (推荐php8)
 - PDO扩展
 
 ###开发手册
@@ -25,12 +25,6 @@ GitHub地址： [https://github.com/willphp/yiyu](https://github.com/willphp/yiy
 
 >如无需composer加载，可删除vendor目录，使用框架自动加载！
 
-###版本特性
-
-- 组件化：可使用composer组件。
-- 轻量级：核心系统只需要一些非常小的库。
-- ORM库：实现对象关系数据库映射。
-- 可扩展：可自定义框架组件、类库、函数。
 
 ###交流Q群
 
