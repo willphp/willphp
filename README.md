@@ -1,35 +1,33 @@
-##WillPHP框架
+## 一鱼PHP框架
 
->WillPHPv4是一个轻量级php开发框架
+告别繁琐，精简开发！一鱼PHP框架(APHP)是一个MVC超轻量级PHP8框架。
 
-###环境要求
+### 框架特色
 
-- PHP版本需要 >=7.4.3 (推荐php8)
-- PDO扩展
+- 代码超轻量(200KB+)，按需加载
+- 数据库链式操作
+- 模型三大自动：验证，处理，过滤
+- 模板标签简单，可定制
+- 支持Redis缓存，命令行可生成MVC
 
-###开发手册
+### 环境要求
 
-开发手册： [https://willphp.gitee.io](https://willphp.gitee.io)
+- PHP环境：PHP7.4 ~ PHP8.4
+- 数据库：MySQL5.6 ~ MySQL8.0
 
-###下载安装
+### 开发案例
 
-Gitee地址： [https://gitee.com/willphp/yiyu](https://gitee.com/willphp/yiyu)
+- 一鱼CMS(aphpcms)：https://www.aphpcms.com 
+- 一鱼文档(aphpdoc)：https://doc.aphp.top  
+- 一鱼后台(aphpadmin)：https://gitee.com/willphp/aphpadmin
 
-GitHub地址： [https://github.com/willphp/yiyu](https://github.com/willphp/yiyu)
+### 相关链接
 
-###composer安装
+- 框架官网：https://www.aphp.top
+- 在线文档：https://doc.aphp.top  
+- Gitee仓库：https://gitee.com/willphp/aphp
+- Github仓库：https://github.com/willphp/aphp
 
-可以使用 composer 命令进行安装：
+### 技术支持
 
-    composer create-project willphp/yiyu blog --prefer-dist
-
->如无需composer加载，可删除vendor目录，使用框架自动加载！
-
-
-###交流Q群
-
->QQ群1：325825297 QQ群2：16008861
-
-###框架版权
-
-官网：[113344.com](http://www.113344.com) 无念(24203741@qq.com) 
+QQ群1：325825297 QQ群2：16008861 作者：无念(24203741@qq.com) 
